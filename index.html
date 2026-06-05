@@ -17,70 +17,79 @@
       </p>
 
       <p class="venue">
-        Conference / Journal Name, 2026
+        CoRL 2026
       </p>
-
-      <div class="links">
-        <a href="paper/paper.pdf">Paper</a>
-        <a href="https://github.com/lvquanping/lvquanping.github.io">Code</a>
-        <a href="#video">Video</a>
-        <a href="#bibtex">BibTeX</a>
-      </div>
-    </section>
-
-    <section>
-      <img class="teaser" src="static/images/teaser.png" alt="PRNav teaser figure">
     </section>
 
     <section>
       <h2>Abstract</h2>
       <p>
-        We introduce PRNav, a benchmark for evaluating ObjectNav under
-        user-specified Personal-Restriction constraints in real-world indoor
-        environments. PRNav focuses on whether embodied agents can balance
-        goal-directed navigation with avoidance of user-specified restricted
-        regions.
+        Existing ObjectNav benchmarks primarily evaluate goal completion and path efficiency under unrestricted exploration, overlooking user-specified spatial restrictions in real-world environments. However, in practical indoor environments, successful navigation is not only about reaching the target efficiently, but also about respecting user-defined areas that the robot should avoid. To this end, we introduce Personal-Restriction-Aware Object Navigation (PRNav), a benchmark that evaluates navigation to target objects under user-specified restrictions. PRNav is built through an automatic graph-based task generation pipeline that abstracts HM3D scenes into simplified room-level scene graphs, selects restriction-relevant main paths, and generates task instances with Personal-Restriction metadata. To evaluate this setting, we introduce two metrics, Restriction Exposure (RExp) and Restriction-Aware SoftSPL (RA-SoftSPL), which measure violation severity and navigation efficiency under soft spatial constraints. We further propose Restriction-Aware Frontier Navigation (RAFN), a zero-shot baseline that ranks frontiers by balancing target utility and restriction risk using target value map and restrict value map. Experiments on PRNav show that conventional ObjectNav policies often violate Personal-Restriction regions, while RAFN provides a better trade-off between goal-directed navigation and restriction avoidance.
       </p>
     </section>
 
     <section>
-      <h2>Benchmark Overview</h2>
-      <p>
-        PRNav provides task instances, restriction metadata, and evaluation
-        metrics for measuring privacy-aware navigation behavior.
-      </p>
-      <img class="figure" src="static/images/framework.png" alt="Benchmark overview">
+      <h2>Main Video</h2>
+      <div class="video-card">
+        <video class="video-player" controls playsinline preload="metadata">
+          <source src="static/videos/3min_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </section>
 
     <section>
-      <h2>Method</h2>
-      <p>
-        We propose RAFN, a zero-shot restriction-aware frontier policy that
-        uses target and restriction value maps to select navigation frontiers.
+      <h2>Real World Demonstration</h2>
+      <p class="video-note">
+        All videos in this section are shown at 5x speed.
       </p>
-    </section>
 
-    <section>
-      <h2>Results</h2>
-      <img class="figure" src="static/images/results.png" alt="Experimental results">
-    </section>
+      <div class="demo-list">
+        <article class="video-card">
+          <h3>Trial 1</h3>
+          <p class="video-meta">Target: broom | Personal-restriction Room: bathroom</p>
+          <video class="video-player" controls playsinline preload="metadata">
+            <source src="static/videos/broom_bathroom.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </article>
 
-    <section id="video">
-      <h2>Video</h2>
-      <video controls width="100%">
-        <source src="static/videos/demo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </section>
+        <article class="video-card">
+          <h3>Trial 2</h3>
+          <p class="video-meta">Target: plant | Personal-restriction Room: terrace</p>
+          <video class="video-player" controls playsinline preload="metadata">
+            <source src="static/videos/plant_terrace.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </article>
 
-    <section id="bibtex">
-      <h2>BibTeX</h2>
-      <pre><code>@article{anonymous2026prnav,
-  title={PRNav: Privacy-Restricted Object Navigation},
-  author={Anonymous Authors},
-  journal={Anonymous Venue},
-  year={2026}
-}</code></pre>
+        <article class="video-card">
+          <h3>Trial 3</h3>
+          <p class="video-meta">Target: tv | Personal-restriction Room: office</p>
+          <video class="video-player" controls playsinline preload="metadata">
+            <source src="static/videos/tv_office.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </article>
+
+        <article class="video-card">
+          <h3>Trial 4</h3>
+          <p class="video-meta">Target: doll | Personal-restriction Room: coffee</p>
+          <video class="video-player" controls playsinline preload="metadata">
+            <source src="static/videos/doll_coffee.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </article>
+
+        <article class="video-card">
+          <h3>Trial 5</h3>
+          <p class="video-meta">Target: chair | Personal-restriction Room: meeting</p>
+          <video class="video-player" controls playsinline preload="metadata">
+            <source src="static/videos/chair_meeting.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </article>
+      </div>
     </section>
   </main>
 </body>
